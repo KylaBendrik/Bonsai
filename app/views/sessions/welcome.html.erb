@@ -1,6 +1,32 @@
 <h1>Bonsai Journaling</h1>
 <% if logged_in? %>
-    <h2>Welcome, <%= current_user.username %></h2>
+    <h2>Welcome, <%= current_user.username %>!</h2>
+    <h3>My Trees</h3>
+    <div class="trees">
+    <% current_user.trees.each do |tree| %>
+        <div class="tree_card">
+            <h1><%= tree.nickname %> <i>(<%= tree.species %>)<i></h1>
+            <ul>
+                <li>Planting Style: <%= tree.planting %></li>
+                <li>Day Begun: <% tree.date %></li>
+            </ul>
+        </div>
+    <%end %>
+    </div>
+    <h3>Add a Tree:</h3>
+    <%= form_with(model: [current_user, current_user.trees.build], local: true) do |form| %>
+    <ul>
+        <li><%= form.label :nickname %></li>
+        <li><%= form.text_field :nickname %></li>
+        <li><%= form.label :species %></li>
+        <li><%= form.text_field :species %></li>
+        <li><%= form.label :date %></li>
+        <li><%= form.text_field :date %></li>
+        <li><%= form.label :planting %></li>
+        <li><%= form.text_field :planting %></li>
+        <li><%= form.submit %>
+    </ul>
+    <% end %>
 <% else %>
     <%= button_to "Login", '/login', method: :get%>
     <%= button_to "Sign Up", '/users/new', method: :get%>

@@ -13,13 +13,45 @@
  *= require_tree .
  *= require_self
  */
- body {
-  background-color:#eafbff;
-  background-image:
-  radial-gradient(circle at 100% 150%, #eafbff 24%, white 24%, white 28%, #eafbff 28%, #eafbff 36%, white 36%, white 40%, transparent 40%, transparent),
-  radial-gradient(circle at 0    150%, #eafbff 24%, white 24%, white 28%, #eafbff 28%, #eafbff 36%, white 36%, white 40%, transparent 40%, transparent),
-  radial-gradient(circle at 50%  100%, white 10%, #eafbff 10%, #eafbff 23%, white 23%, white 30%, #eafbff 30%, #eafbff 43%, white 43%, white 50%, #eafbff 50%, #eafbff 63%, white 63%, white 71%, transparent 71%, transparent),
-  radial-gradient(circle at 100% 50%, white 5%, #eafbff 5%, #eafbff 15%, white 15%, white 20%, #eafbff 20%, #eafbff 29%, white 29%, white 34%, #eafbff 34%, #eafbff 44%, white 44%, white 49%, transparent 49%, transparent),
-  radial-gradient(circle at 0    50%, white 5%, #eafbff 5%, #eafbff 15%, white 15%, white 20%, #eafbff 20%, #eafbff 29%, white 29%, white 34%, #eafbff 34%, #eafbff 44%, white 44%, white 49%, transparent 49%, transparent);
-  background-size: 100px 50px;
- }
+body {
+font-family: Candara;
+background-color:#eafbff;
+background-image:
+radial-gradient(circle at 100% 150%, #eafbff 24%, white 24%, white 28%, #eafbff 28%, #eafbff 36%, white 36%, white 40%, transparent 40%, transparent),
+radial-gradient(circle at 0    150%, #eafbff 24%, white 24%, white 28%, #eafbff 28%, #eafbff 36%, white 36%, white 40%, transparent 40%, transparent),
+radial-gradient(circle at 50%  100%, white 10%, #eafbff 10%, #eafbff 23%, white 23%, white 30%, #eafbff 30%, #eafbff 43%, white 43%, white 50%, #eafbff 50%, #eafbff 63%, white 63%, white 71%, transparent 71%, transparent),
+radial-gradient(circle at 100% 50%, white 5%, #eafbff 5%, #eafbff 15%, white 15%, white 20%, #eafbff 20%, #eafbff 29%, white 29%, white 34%, #eafbff 34%, #eafbff 44%, white 44%, white 49%, transparent 49%, transparent),
+radial-gradient(circle at 0    50%, white 5%, #eafbff 5%, #eafbff 15%, white 15%, white 20%, #eafbff 20%, #eafbff 29%, white 29%, white 34%, #eafbff 34%, #eafbff 44%, white 44%, white 49%, transparent 49%, transparent);
+background-size: 100px 50px;
+}
+ul {
+  list-style-type: none;
+  padding-left: 0px;
+}
+label {
+  display: inline-block
+}
+h1 {
+  font-size: 48px;
+  font-weight: bold;
+}
+.trees {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+.tree_card {
+  display: block;
+  width: 300px;
+  height: 200px;
+  margin: 2px;
+  padding: 10px;
+  
+  background: #007c89;
+  color: white;
+}
+.tree_card h1 {
+  font-size: 24px;
+  text-align: right;
+}
