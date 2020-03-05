@@ -1,0 +1,7 @@
+<h1>Bonsai Journaling</h1>
+<% if logged_in? %>
+    <h2>Welcome, <%= current_user.username %></h2>
+<% else %>
+    <%= button_to "Login", '/login', method: :get%>
+    <%= button_to "Sign Up", '/users/new', method: :get%>
+<%end%>
