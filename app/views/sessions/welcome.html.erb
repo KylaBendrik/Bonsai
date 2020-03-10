@@ -1,16 +1,20 @@
-<h1>Bonsai Journaling</h1>
+<div class="header">Bonsai Journaling</div>
+
+<div class="content">
 <% if logged_in? %>
-    <h2>Welcome, <%= current_user.username %>!</h2>
+    <div class="subheader">Welcome, <%= current_user.username %>!</div>
     <h3>My Trees</h3>
     <div class="trees">
     <% current_user.trees.each do |tree| %>
+        <%= link_to tree_path(current_user, tree) do %>
         <div class="tree_card">
-            <h1><%= tree.nickname %> <i>(<%= tree.species %>)<i></h1>
+            <h1><%= tree.nickname %><span class="tree_species">(<%= tree.species %>)</span></h1>
             <ul>
                 <li>Planting Style: <%= tree.planting %></li>
                 <li>Day Begun: <% tree.date %></li>
             </ul>
         </div>
+        <% end %>
     <%end %>
     </div>
     <h3>Add a Tree:</h3>
@@ -31,3 +35,4 @@
     <%= button_to "Login", '/login', method: :get%>
     <%= button_to "Sign Up", '/users/new', method: :get%>
 <%end%>
+</div>

@@ -23,6 +23,34 @@ radial-gradient(circle at 50%  100%, white 10%, #eafbff 10%, #eafbff 23%, white 
 radial-gradient(circle at 100% 50%, white 5%, #eafbff 5%, #eafbff 15%, white 15%, white 20%, #eafbff 20%, #eafbff 29%, white 29%, white 34%, #eafbff 34%, #eafbff 44%, white 44%, white 49%, transparent 49%, transparent),
 radial-gradient(circle at 0    50%, white 5%, #eafbff 5%, #eafbff 15%, white 15%, white 20%, #eafbff 20%, #eafbff 29%, white 29%, white 34%, #eafbff 34%, #eafbff 44%, white 44%, white 49%, transparent 49%, transparent);
 background-size: 100px 50px;
+display: grid;
+grid-template-columns: auto 50px 40px;
+grid-template-rows: 120px 50px auto 10px;
+}
+.header {
+  font-size: 80px;
+  font-weight: bold;
+  text-align: right;
+  grid-column-start: 1;
+  grid-column-end: span col3-start;
+  grid-row-start: 1;
+  background-color: rgba(0, 124, 137, 0.5);
+  padding-right: 20px;
+}
+.subheader {
+  font-size: 36px;
+  font-style: italic;
+  background-color: rgba(0, 124, 137, 0.2);
+  grid-column-start: 1;
+  grid-column-end: span col3-start;
+  grid-row-start: 1;
+  padding-left: 10px;
+}
+.content {
+  grid-column-start: 1;
+  grid-column-end: span col3-start;
+  grid-row-start: 2;
+  grid-row-end: span 2;
 }
 ul {
   list-style-type: none;
@@ -31,15 +59,11 @@ ul {
 label {
   display: inline-block
 }
-h1 {
-  font-size: 48px;
-  font-weight: bold;
-}
 .trees {
-  width: 100%;
   display: flex;
   flex-wrap: wrap;
-  justify-content: center;
+  justify-content: flex-start;
+  width: 95%
 }
 .tree_card {
   display: block;
@@ -47,11 +71,24 @@ h1 {
   height: 200px;
   margin: 2px;
   padding: 10px;
+  flex: 0 1 auto;
+  text-align: left;
   
-  background: #007c89;
+  transition-duration: 0.5s;
+  background: #069eaf;
   color: white;
 }
+.tree_card:hover {
+  background: #0bb9cc;
+  width: 400px;
+  height: 300px;
+}
 .tree_card h1 {
+  color: #003a3f;
   font-size: 24px;
-  text-align: right;
+}
+.tree_species {
+  font-size: 20px;
+  font-style: italic;
+  padding-left: 5px;
 }

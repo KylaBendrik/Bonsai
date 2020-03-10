@@ -5,6 +5,10 @@ class TreesController < ApplicationController
     redirect_to '/welcome'
   end
 
+  def show
+    @tree = Tree.find(params[:id])
+  end
+
   private
     def tree_params
       params.require(:tree).permit(:nickname, :species, :date)
