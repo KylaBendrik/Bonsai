@@ -57,55 +57,6 @@ a {
   grid-row-start: 2;
   grid-row-end: span 2;
 }
-ul {
-  list-style-type: none;
-  padding-left: 0px;
-}
 label {
   display: inline-block
-}
-.trees {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: flex-start;
-  width: 95%
-}
-.tree_species {
-  font-size: 20px;
-  font-style: italic;
-  padding-left: 5px;
-}
-.trees li {
-  width: 300px;
-  height: 200px; 
-  list-style: none;
-  padding: 0;
-  margin: 0;
-  float: left;
-  margin: 5px;
-  position: relative;
-}
-.trees ul {
-  list-style: none;
-  padding: 0;
-  margin: 0;
-  width: 100%;
-}
-.trees .card {
-  width: 300px;
-  height: 200px;
-  background-color: #069eaf;
-  position:absolute;
-  z-index:1;
-  margin: 5px;
-  -webkit-transition:all 0.3s ease-in-out;  
-}
-
-.trees .card:hover { 
-  background: #0bb9cc;
-  width: 400px;
-  height: 300px;
-  z-index:2;
-  -webkit-transform:translate(-5px,-5px);
-  -webkit-box-shadow: 1px 1px 1px #888;
 }

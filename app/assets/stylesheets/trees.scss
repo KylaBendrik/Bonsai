@@ -1,3 +1,113 @@
-// Place all the styles related to the Trees controller here.
-// They will automatically be included in application.css.
-// You can use Sass (SCSS) here: https://sass-lang.com/
+$stat_padding: 15px;
+$card_transition: 0.5s;
+ul {
+  padding-left: 0px;
+  
+  list-style-type: none;
+}
+li.card_container {
+  width: 300px;
+  height: 200px; 
+  padding: 0;
+  margin: 5px;
+  list-style: none;
+  float: left;
+  position: relative;
+  z-index: 1;
+  transition: z-index 0.01s step-end;
+  
+  &:hover {
+    z-index: 2;
+    transition: z-index 0.01s step-start;
+  }
+}
+.trees {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  
+  margin: 10px;
+}
+.card {
+  display: grid;
+  grid-template-columns: 140px 1fr;
+  
+  width: 300px;
+  height: 200px;
+  margin: 5px;
+
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  
+  transition: $card_transition;
+  
+  &:hover {
+    width: 400px;
+    height: 300px;
+  }
+}
+
+.card:hover {
+  .extra_stats {
+    flex: 1;
+  }
+  ul {
+    height: 200px;
+  }
+}
+.card {
+  ul {
+    display: flex;
+    flex-direction: column;
+    
+    height: 159px;
+    padding: 5px;
+    
+    list-style: none;
+
+    transition: height $card_transition ease;  
+  }
+  .value {
+    display: block;
+    
+    padding-bottom: 15px;
+  }
+  .stats {
+    flex: 1;
+    position: relative;
+    
+    background: #069eaf;
+  }.label {
+    display: block;
+    
+    padding-left: 10px;
+    
+    
+    border-bottom-style: solid;
+    border-width: 1px;
+    
+    font-size: 12px;
+    font-weight: bold;
+    text-transform: uppercase;
+  }
+  .images img {
+    object-fit: cover;
+    width: 260px;
+    height: 300px;
+    max-height: 100%;
+    max-width: 100%;
+  }
+  .nickname {
+    color: #084a50;
+
+    font-size: 25px;
+    font-weight: bold;
+  }
+  .extra_stats {
+    flex: 0;
+    
+    overflow: hidden;
+    height: 50px;
+    
+    transition: flex $card_transition ease;  
+  }
+}
