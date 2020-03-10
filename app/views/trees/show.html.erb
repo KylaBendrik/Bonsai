@@ -1,2 +1,8 @@
 <div class="header">Bonsai Journaling</div>
-<%= @tree.nickname%>
+<div class="subheader"><%= @tree.nickname%> (<%= @tree.species %>)</div>
+</div class="content">
+    <ul>
+        <li>Style: <%= @tree.style %></li>
+        <li>In Training Since: <% @tree.date %></li>
+    </ul>
+</div>

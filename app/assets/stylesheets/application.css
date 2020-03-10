@@ -26,6 +26,11 @@ background-size: 100px 50px;
 display: grid;
 grid-template-columns: auto 50px 40px;
 grid-template-rows: 120px 50px auto 10px;
+color: black;
+}
+a {
+  text-decoration: none;
+  color: black
 }
 .header {
   font-size: 80px;
@@ -43,7 +48,7 @@ grid-template-rows: 120px 50px auto 10px;
   background-color: rgba(0, 124, 137, 0.2);
   grid-column-start: 1;
   grid-column-end: span col3-start;
-  grid-row-start: 1;
+  grid-row-start: 2;
   padding-left: 10px;
 }
 .content {
@@ -65,30 +70,42 @@ label {
   justify-content: flex-start;
   width: 95%
 }
-.tree_card {
-  display: block;
-  width: 300px;
-  height: 200px;
-  margin: 2px;
-  padding: 10px;
-  flex: 0 1 auto;
-  text-align: left;
-  
-  transition-duration: 0.5s;
-  background: #069eaf;
-  color: white;
-}
-.tree_card:hover {
-  background: #0bb9cc;
-  width: 400px;
-  height: 300px;
-}
-.tree_card h1 {
-  color: #003a3f;
-  font-size: 24px;
-}
 .tree_species {
   font-size: 20px;
   font-style: italic;
   padding-left: 5px;
+}
+.trees li {
+  width: 300px;
+  height: 200px; 
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  float: left;
+  margin: 5px;
+  position: relative;
+}
+.trees ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  width: 100%;
+}
+.trees .card {
+  width: 300px;
+  height: 200px;
+  background-color: #069eaf;
+  position:absolute;
+  z-index:1;
+  margin: 5px;
+  -webkit-transition:all 0.3s ease-in-out;  
+}
+
+.trees .card:hover { 
+  background: #0bb9cc;
+  width: 400px;
+  height: 300px;
+  z-index:2;
+  -webkit-transform:translate(-5px,-5px);
+  -webkit-box-shadow: 1px 1px 1px #888;
 }

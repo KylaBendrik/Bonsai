@@ -4,7 +4,7 @@ class CreateTrees < ActiveRecord::Migration[6.0]
       t.string :nickname
       t.string :species
       t.string :date
-      t.string :planting
+      t.string :style
       t.references :user, null: false, foreign_key: true
 
       t.timestamps
